@@ -10,7 +10,7 @@ class RegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'password1', 'password2']
 
-# Profile Form for Fitness Goals
+# Profile Form for Fitness Goalsi
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile

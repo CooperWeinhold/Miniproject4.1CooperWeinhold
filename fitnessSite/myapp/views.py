@@ -99,7 +99,7 @@ def calculate_macros(current_weight, goal_weight, height, age, gender, activity_
     weight_difference_kg = goal_weight_kg - current_weight_kg
     total_caloric_adjustment = weight_difference_kg * 7700  # 7700 calories per kg
 
-    # Step 4: Calculate daily caloric adjustment
+    # Step 4: Calculate daily caloric adjustmenti
     days_to_goal = timeline * 7
     daily_caloric_adjustment = total_caloric_adjustment / days_to_goal
 

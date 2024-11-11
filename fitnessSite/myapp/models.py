@@ -30,7 +30,7 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
 
-# Exercise Tracking
+# Exercise Trackingi
 class Exercise(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
