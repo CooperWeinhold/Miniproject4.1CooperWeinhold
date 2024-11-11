@@ -12,13 +12,34 @@
         const weightChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: {{ dates|safe }},
+                labels: {{ labels|safe }},  // Dates for the x-axis
                 datasets: [{
-                    label: 'Weight',
-                    data: {{ weights|safe }},
+                    label: 'Weight (lbs)',
+                    data: {{ weights|safe }},  // Weights for the y-axis
+                    fill: false,
+                    borderColor: 'blue',
+                    tension: 0.1
                 }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Date'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Weight (lbs)'
+                        },
+                        beginAtZero: false
+                    }
+                }
             }
         });
     </script>
 {% endblock %}
+
 
